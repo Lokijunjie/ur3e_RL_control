@@ -1,0 +1,4 @@
+<launch>
+   <!-- Load the URDF and spawn the robot in the gazebo environment -->
+   <node pkg="isaac_control" type="test_vel_control.py" name="test_vel" output="screen" />
+</launch>
