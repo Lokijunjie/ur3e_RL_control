@@ -36,15 +36,15 @@
   <arg name="kinematics_params" default="$(find ur_description)/config/ur3e/default_kinematics.yaml"/>
   <arg name="physical_params" default="$(find ur_description)/config/ur3e/physical_parameters.yaml"/>
   <arg name="visual_params" default="$(find ur_description)/config/ur3e/visual_parameters.yaml"/>
-  <arg name="transmission_hw_interface" default="hardware_interface/VelocityJointInterface" doc="The hardware_interface to expose for each joint in the simulated robot (one of: [hardware_interface/PositionJointInterface, hardware_interface/VelocityJointInterface, hardware_interface/EffortJointInterface])"/>
+  <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" doc="The hardware_interface to expose for each joint in the simulated robot (one of: [hardware_interface/PositionJointInterface, hardware_interface/VelocityJointInterface, hardware_interface/EffortJointInterface])"/>
 
   <!-- Controller configuration -->
   <arg name="controller_config_file" default="$(find ur_gazebo)/config/ur3e_controllers.yaml" doc="Config file used for defining the ROS-Control controllers."/>
   <!-- <arg name="controllers" default="joint_state_controller eff_joint_traj_controller" doc="Controllers that are activated by default."/> -->
   <!-- <arg name="stopped_controllers" default="joint_group_eff_controller" doc="Controllers that are initally loaded, but not started."/> -->
 
-  <arg name="controllers" default="joint_state_controller joint_group_velocity_controller" doc="Controllers that are activated by default."/>
-  <arg name="stopped_controllers" default="joint_group_vel_controller" doc="Controllers that are initally loaded, but not started."/>
+  <arg name="controllers" default="joint_state_controller pos_joint_traj_controller" doc="Controllers that are activated by default."/>
+  <arg name="stopped_controllers" default="joint_group_pos_controller" doc="Controllers that are initally loaded, but not started."/>
 
   <!-- robot_state_publisher configuration -->
   <arg name="tf_prefix" default="" doc="tf_prefix used for the robot."/>
